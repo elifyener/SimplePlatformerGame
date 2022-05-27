@@ -20,12 +20,15 @@ public class CharacterMovement : MonoBehaviour
 
     public GameObject PlayerHurtParticle;
 
+    public Vector2 startPos;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
     }
     private void Start() 
     {
+        startPos = transform.position;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -89,6 +92,7 @@ public class CharacterMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             GameObject spawnedObject = Instantiate(PlayerHurtParticle, transform.position, Quaternion.identity, null);
+            transform.position = startPos;
         }
     }
 }
