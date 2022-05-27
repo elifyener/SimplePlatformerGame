@@ -18,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
     public ParticleSystem PlayerWalkingParticleSystem;
     public ParticleSystem.MainModule PlayerWalkingParticleSystemMainModule;
 
+    public GameObject PlayerHurtParticle;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -44,18 +46,20 @@ public class CharacterMovement : MonoBehaviour
     private void Update() 
     {
         
-        if (grounded && (Input.GetAxis("Horizontal") != 0))
+        if ((Input.GetAxis("Horizontal") != 0))
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 moveDirection = -1.0f;
-                _spriteRenderer.flipX = true;
+                float yRotation = 180.0f;
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
                 anim.SetFloat("speed", speed);
             }
             else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 moveDirection = 1.0f;
-                _spriteRenderer.flipX = false;
+                float yRotation = 0.0f;
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
                 anim.SetFloat("speed", speed);
             }
 
@@ -81,6 +85,10 @@ public class CharacterMovement : MonoBehaviour
             grounded = true;
             PlayerWalkingParticleSystem.Play();
             anim.SetBool("grounded", true);
+        }
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            GameObject spawnedObject = Instantiate(PlayerHurtParticle, transform.position, Quaternion.identity, null);
         }
     }
 }
