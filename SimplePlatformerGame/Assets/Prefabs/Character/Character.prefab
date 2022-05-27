@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8653457892348231517}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 7
   speed: 7
+  PlayerWalkingParticleSystem: {fileID: 8220828762679529651}
 --- !u!212 &8653457892348231514
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -266,6 +267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkingParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 802510674546256373, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b085223ec52b2e449dd26fdcd4712dc, type: 2}
     - target: {fileID: 802510674546256378, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
       propertyPath: looping
       value: 1
@@ -324,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802510674546256378, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 802510674546256378, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -340,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802510674546256378, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 802510674546256379, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
       propertyPath: m_RootOrder
@@ -391,5 +396,10 @@ PrefabInstance:
 --- !u!4 &8220828762679529650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 802510674546256379, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
+  m_PrefabInstance: {fileID: 8733982713257277769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8220828762679529651 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 802510674546256378, guid: 6281fa55efb90654a96647f1402c4462, type: 3}
   m_PrefabInstance: {fileID: 8733982713257277769}
   m_PrefabAsset: {fileID: 0}

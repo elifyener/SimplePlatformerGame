@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5958330193388170735}
   - component: {fileID: 5958330193388170734}
   - component: {fileID: 5958330193388170733}
+  - component: {fileID: 180388177}
+  - component: {fileID: 180388178}
   m_Layer: 0
   m_Name: Bronze Coin
   m_TagString: Untagged
@@ -105,3 +107,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &180388177
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958330193388170732}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2774428
+--- !u!114 &180388178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958330193388170732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de04b81fecd1b334c862c873d23d4b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinParticle: {fileID: 2590285799225158481, guid: 2cc5c245108229647a50ceb459a1831a, type: 3}

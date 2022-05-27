@@ -15,6 +15,9 @@ public class CharacterMovement : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private float moveDirection;
 
+    public ParticleSystem PlayerWalkingParticleSystem;
+    public ParticleSystem.MainModule PlayerWalkingParticleSystemMainModule;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -32,6 +35,7 @@ public class CharacterMovement : MonoBehaviour
         if (jump)
         {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpForce);
+            PlayerWalkingParticleSystem.Stop();
             jump = false;
         }
         
@@ -75,6 +79,7 @@ public class CharacterMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             grounded = true;
+            PlayerWalkingParticleSystem.Play();
             anim.SetBool("grounded", true);
         }
     }
