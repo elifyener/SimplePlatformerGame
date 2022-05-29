@@ -7,18 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4178360754903153888, guid: e0ca5eb3cfad2764d8c219e0044c9c8c, type: 3}
+      propertyPath: CoinAmount
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7731758387612684380, guid: e0ca5eb3cfad2764d8c219e0044c9c8c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6582046967323461550, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
-    - target: {fileID: 7731758387612684380, guid: e0ca5eb3cfad2764d8c219e0044c9c8c, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7731758387612684380, guid: e0ca5eb3cfad2764d8c219e0044c9c8c, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -410522175
-      objectReference: {fileID: 0}
     - target: {fileID: 7731758387612684381, guid: e0ca5eb3cfad2764d8c219e0044c9c8c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -65,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731758387612684382, guid: e0ca5eb3cfad2764d8c219e0044c9c8c, type: 3}
       propertyPath: m_Name
-      value: Bronze
+      value: Silver Coin
       objectReference: {fileID: 0}
     - target: {fileID: 7731758387612684383, guid: e0ca5eb3cfad2764d8c219e0044c9c8c, type: 3}
       propertyPath: m_Controller

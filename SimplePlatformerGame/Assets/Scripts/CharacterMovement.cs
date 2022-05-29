@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -22,6 +24,13 @@ public class CharacterMovement : MonoBehaviour
 
     public Vector2 startPos;
 
+    public float CurrentHealth;
+    public float MaxHealth = 100f;
+
+    public int CollectedCoinAmount = 0;
+
+    public UIManager uiManager;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -31,6 +40,10 @@ public class CharacterMovement : MonoBehaviour
         startPos = transform.position;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        CurrentHealth = MaxHealth;
+        CollectedCoinAmount = 0;
+
+        uiManager = FindObjectOfType<UIManager>();
     }
     private void FixedUpdate() 
     {
@@ -92,7 +105,23 @@ public class CharacterMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             GameObject spawnedObject = Instantiate(PlayerHurtParticle, transform.position, Quaternion.identity, null);
-            transform.position = startPos;
+            CurrentHealth -= 20f;
+            if(CurrentHealth <= 0)
+            {
+                uiManager.OpenLoseScreen();
+            }
+            uiManager.UpdateHealthImage(CurrentHealth/MaxHealth);
+            StartCoroutine(SpawnCharacter());
         }
+    }
+    IEnumerator SpawnCharacter(){
+        yield return new WaitForSeconds(0.5f);
+        transform.position = startPos;
+    }
+
+    public void CoinCollected(int CoinAmount)
+    {
+        CollectedCoinAmount += CoinAmount;
+        uiManager.UpdateCoinText(CollectedCoinAmount);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinCollectParticleSpawn : MonoBehaviour
 {
+    public int CoinAmount = 10;
     public GameObject CoinParticle;
 
     void SpawnCoinParticle()
@@ -16,6 +17,7 @@ public class CoinCollectParticleSpawn : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             SpawnCoinParticle();
+            other.GetComponent<CharacterMovement>().CoinCollected(CoinAmount);
             Destroy(gameObject);
         }
     }
