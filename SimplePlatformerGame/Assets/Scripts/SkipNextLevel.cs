@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class SkipNextLevel : MonoBehaviour
 {
     public GameObject StarParticle;
+    public UIManager uiManager;
+
+    private void Start()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
 
     void StarCoinParticle()
     {
@@ -22,6 +28,14 @@ public class SkipNextLevel : MonoBehaviour
     }
     IEnumerator LoadLevel(){
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        if(SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            uiManager.OpenWinScreen();
+        }
     }
 }
