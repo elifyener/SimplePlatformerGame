@@ -58,4 +58,4 @@ Ayrıca Simple Platformer Game'in build versiyonunu aşağıdaki linkten ulaşab
 </p>
 
 ## Authors
-Made with :heart: by [Elif Yener](https://github.com/elifyener)
+Made with :heart: by [Elif Yener](https://github.com/elifyener).
