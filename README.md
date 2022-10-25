@@ -28,33 +28,33 @@ Simple Platformer Game, basit klavye kontrolleriyle temel düzeyde oynanabilecek
 
 Aşağıdaki yollardan birini kullanarak Simple Platformer Game kaynak koduna erişebilirsiniz:
 
-- [:sparkles: Download Source Code](https://github.com/elifyener/TechCareerProjects/archive/master.zip)
+- [:sparkles: Download Source Code](https://github.com/elifyener/SimplePlatformerGame/archive/master.zip)
 - :fire:  Depoyu yerel olarak klonlayın:
 
 ```bash
-git clone https://github.com/elifyener/TechCareerProjects.git
+git clone https://github.com/elifyener/SimplePlatformerGame.git
 ```
 
 Ayrıca Simple Platformer Game'in build versiyonunu aşağıdaki linkten ulaşabilirsiniz:
 
-- [:star: Download Build](https://github.com/elifyener/TechCareerProjects/blob/main/SimplePlatformerGame/Build.zip?raw=true)
+- [:star: Download Build](https://github.com/elifyener/SimplePlatformerGame/blob/main/SimplePlatformerGame/Build.zip?raw=true)
 
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/elifyener/TechCareerProjects/blob/main/images/spg1.png" />
+  <img src="https://github.com/elifyener/SimplePlatformerGame/blob/main/images/spg1.png" />
 </p>
 <p align="center">
-  <img src="https://github.com/elifyener/TechCareerProjects/blob/main/images/spg2.png" />
+  <img src="https://github.com/elifyener/SimplePlatformerGame/blob/main/images/spg2.png" />
 </p>
 <p align="center">
-  <img src="https://github.com/elifyener/TechCareerProjects/blob/main/images/spg3.png" />
+  <img src="https://github.com/elifyener/SimplePlatformerGame/blob/main/images/spg3.png" />
 </p>
 <p align="center">
-  <img src="https://github.com/elifyener/TechCareerProjects/blob/main/images/spg4.png" />
+  <img src="https://github.com/elifyener/SimplePlatformerGame/blob/main/images/spg4.png" />
 </p>
 <p align="center">
-  <img src="https://github.com/elifyener/TechCareerProjects/blob/main/images/spg5.png" />
+  <img src="https://github.com/elifyener/SimplePlatformerGame/blob/main/images/spg5.png" />
 </p>
 
 ## Authors
